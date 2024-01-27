@@ -14,11 +14,8 @@
 </template>
 
 <script>
-    import { defineComponent,computed } from 'vue';
-
-    export default defineComponent({
-        name: 'CatalogView'
-    });
+    import { defineComponent} from 'vue';
+    export default defineComponent({name: 'CatalogView'});
 </script>
 
 <script setup>
