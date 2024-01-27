@@ -7,15 +7,33 @@ import TheWelcome from '../components/TheWelcome.vue'
     <TheWelcome />
 
     <div class="products-list">
-      <div class="product"   >
-        <div class="item1">item 1 </div>
-        <div class="item2">item 2 </div>
-        <div class="item3">item 3 </div>
-        <div class="item4">item 4 </div>  
-        <div class="item5">item 5 </div>
-        <div class="item6">item 6 </div>  
-      </div>
+        <div class="product">item 1 </div>
+        <div class="product">item 2 </div>
+        <div class="product">item 3 </div>
+        <div class="product">item 4 </div>  
+        <div class="product">item 5 </div>
+        <div class="product">item 6 </div>  
  </div>
 
   </main>
 </template>
+
+
+<style scoped>
+.products-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product {
+    flex-basis: 28%;
+    margin: 8px;
+    padding: 16px;
+    box-shadow: 0px 0px 14px 1px #e6e6e6;
+    cursor: pointer;
+}
+
+.product img {
+    width: 70%;
+}
+</style>
