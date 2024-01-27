@@ -1,21 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Catalog from "@/views/Catalog.vue";
+import testview from "@/views/testview.vue";
+import ProductDetail from "@/views/ProductDetail.vue";
+import Cart from "@/views/Cart.vue";
+
+// 2. Define some routes
+// Each route should map to a component.
+// We'll talk about nested routes later.
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'Catalog', //Nombre del view
+      component: Catalog
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/testview',
+      name: 'testview', //Nombre del view
+      component: testview
+    },
+    {
+      path: '/product/:id',
+      name: 'ProductView',
+      component: ProductDetail
+    }
+    ,
+    {
+      path: '/cart',
+      name: 'CartView',
+      component: Cart
     }
   ]
 })
